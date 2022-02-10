@@ -3,6 +3,21 @@
   "version": 1.0,
   "schemas": [
     {
+      "name": "AnyWork Automation Configuration",
+      "description": "AnyWork Automation Configuration used to configure automation scripts on AnyWork",
+      "fileMatch": [
+        ".awc.yaml",
+        ".awc.yml",
+        ".awc.json",
+        ".awc.jsonc",
+        ".awc"
+      ],
+      "url": "https://json.schemastore.org/anywork-ac-1.1.json",
+      "versions": {
+        "1.0": "https://json.schemastore.org/anywork-ac-1.0.json"
+      }
+    },
+    {
       "name": ".adonisrc.json",
       "description": "AdonisJS configuration file",
       "fileMatch": [
@@ -17,10 +32,11 @@
         ".agripparc.json",
         "agripparc.json"
       ],
-      "url": "https://json.schemastore.org/agripparc-1.3.json",
+      "url": "https://json.schemastore.org/agripparc-1.4.json",
       "versions": {
         "1.2": "https://json.schemastore.org/agripparc-1.2.json",
-        "1.3": "https://json.schemastore.org/agripparc-1.3.json"
+        "1.3": "https://json.schemastore.org/agripparc-1.3.json",
+        "1.4": "https://json.schemastore.org/agripparc-1.4.json"
       }
     },
     {
@@ -64,29 +80,34 @@
       "url": "https://raw.githubusercontent.com/angular/angular-cli/v10.1.6/packages/angular/cli/lib/config/schema.json"
     },
     {
-      "name": "Ansible Role",
-      "description": "Ansible role task files",
-      "url": "https://json.schemastore.org/ansible-role-2.9.json",
+      "name": "Ansible Execution Environment",
+      "description": "Ansible execution-environment.yml file",
+      "url": "https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible-ee.json",
+      "fileMatch": [
+        "**/execution-environment.yml"
+      ]
+    },
+    {
+      "name": "Ansible Meta Runtime",
+      "description": "Ansible meta/runtime.yml file",
+      "url": "https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible-meta-runtime.json",
+      "fileMatch": [
+        "**/meta/runtime.yml"
+      ]
+    },
+    {
+      "name": "Ansible Tasks File",
+      "description": "Ansible tasks file",
+      "url": "https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible-tasks.json",
       "fileMatch": [
         "**/roles/**/tasks/*.yml",
         "**/roles/**/tasks/*.yaml"
-      ],
-      "versions": {
-        "2.0": "https://json.schemastore.org/ansible-role-2.0.json",
-        "2.1": "https://json.schemastore.org/ansible-role-2.1.json",
-        "2.2": "https://json.schemastore.org/ansible-role-2.2.json",
-        "2.3": "https://json.schemastore.org/ansible-role-2.3.json",
-        "2.4": "https://json.schemastore.org/ansible-role-2.4.json",
-        "2.5": "https://json.schemastore.org/ansible-role-2.5.json",
-        "2.6": "https://json.schemastore.org/ansible-role-2.6.json",
-        "2.7": "https://json.schemastore.org/ansible-role-2.7.json",
-        "2.9": "https://json.schemastore.org/ansible-role-2.9.json"
-      }
+      ]
     },
     {
       "name": "Ansible Playbook",
       "description": "Ansible playbook files",
-      "url": "https://json.schemastore.org/ansible-playbook.json",
+      "url": "https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible-playbook.json",
       "fileMatch": [
         "playbook.yml",
         "playbook.yaml"
@@ -95,7 +116,7 @@
     {
       "name": "Ansible Inventory",
       "description": "Ansible inventory files",
-      "url": "https://json.schemastore.org/ansible-inventory.json",
+      "url": "https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible-inventory.json",
       "fileMatch": [
         "inventory.yml",
         "inventory.yaml"
@@ -107,6 +128,19 @@
       "url": "https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible-galaxy.json",
       "fileMatch": [
         "galaxy.yml"
+      ]
+    },
+    {
+      "name": "Ansible Navigator Configuration",
+      "description": "Ansible Navigator Configuration",
+      "url": "https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible-navigator.json",
+      "fileMatch": [
+        ".ansible-navigator.json",
+        ".ansible-navigator.yaml",
+        ".ansible-navigator.yml",
+        "ansible-navigator.json",
+        "ansible-navigator.yaml",
+        "ansible-navigator.yml"
       ]
     },
     {
@@ -161,7 +195,12 @@
     {
       "name": "architect.yml",
       "description": "Architect.io Component Schema",
-      "fileMatch": ["architect.yml", "architect.yaml", "*.architect.yml", "*.architect.yaml"],
+      "fileMatch": [
+        "architect.yml",
+        "architect.yaml",
+        "*.architect.yml",
+        "*.architect.yaml"
+      ],
       "url": "https://raw.githubusercontent.com/architect-team/architect-cli/master/src/dependency-manager/schema/architect.schema.json"
     },
     {
@@ -194,6 +233,28 @@
         "*.avsc"
       ],
       "url": "https://json.schemastore.org/avro-avsc.json"
+    },
+    {
+      "name": "Azure Device Update for IoT Hub import manifest",
+      "description": "Azure Device Update for IoT Hub import manifest schema",
+      "fileMatch": [
+        "*.importmanifest.json"
+      ],
+      "url": "https://json.schemastore.org/azure-deviceupdate-import-manifest-4.0.json",
+      "versions": {
+        "4.0": "https://json.schemastore.org/azure-deviceupdate-import-manifest-4.0.json"
+      }
+    },
+    {
+      "name": "Azure Device Update for IoT Hub update manifest",
+      "description": "Azure Device Update for IoT Hub update manifest schema",
+      "fileMatch": [
+        "*.updatemanifest.json"
+      ],
+      "url": "https://json.schemastore.org/azure-deviceupdate-update-manifest-4.json",
+      "versions": {
+        "4": "https://json.schemastore.org/azure-deviceupdate-update-manifest-4.json"
+      }
     },
     {
       "name": "Azure IoT EdgeAgent deployment",
@@ -245,7 +306,7 @@
         "azure-pipelines.yml",
         "azure-pipelines.yaml"
       ],
-      "url": "https://raw.githubusercontent.com/microsoft/azure-pipelines-vscode/v1.174.2/service-schema.json"
+      "url": "https://raw.githubusercontent.com/microsoft/azure-pipelines-vscode/master/service-schema.json"
     },
     {
       "name": "Foxx Manifest",
@@ -477,7 +538,7 @@
       "name": "block.json",
       "description": "Schema WordPress block.json files",
       "fileMatch": [
-          "block.json"
+        "block.json"
       ],
       "url": "https://schemas.wp.org/trunk/block.json",
       "versions": {
@@ -522,7 +583,7 @@
     {
       "name": "CityJSON",
       "description": "Schema for the representation of 3D city models",
-      "url": "https://raw.githubusercontent.com/cityjson/specs/1.0.1/schemas/cityjson.min.schema.json"
+      "url": "https://raw.githubusercontent.com/cityjson/specs/master/schemas/cityjson.min.schema.json"
     },
     {
       "name": "Helm Chart.yaml",
@@ -614,6 +675,14 @@
         "codeship-steps.yml"
       ],
       "url": "https://json.schemastore.org/codeship-steps.json"
+    },
+    {
+      "name": "Vercel",
+      "description": "Vercel configuration file",
+      "fileMatch": [
+        "vercel.json"
+      ],
+      "url": "https://openapi.vercel.sh/vercel.json"
     },
     {
       "name": "VSCode Code Snippets",
@@ -759,7 +828,7 @@
       "fileMatch": [
         "composer.json"
       ],
-      "url": "https://raw.githubusercontent.com/composer/composer/master/res/composer-schema.json"
+      "url": "https://raw.githubusercontent.com/composer/composer/main/res/composer-schema.json"
     },
     {
       "name": "component.json",
@@ -849,7 +918,9 @@
     {
       "name": "Dart test config",
       "description": "Configuration for Dart's test package",
-      "fileMatch": [ "dart_test.yaml" ],
+      "fileMatch": [
+        "dart_test.yaml"
+      ],
       "url": "https://json.schemastore.org/dart-test.json"
     },
     {
@@ -937,7 +1008,7 @@
       "fileMatch": [
         "bounded-context.json"
       ],
-      "url": "https://raw.githubusercontent.com/dolittle/Runtime/v5.1.1/Schemas/Applications.Configuration/bounded-context.json"
+      "url": "https://raw.githubusercontent.com/dolittle/Runtime/master/Schemas/Applications.Configuration/bounded-context.json"
     },
     {
       "name": "Dolittle Event Horizons Configuration",
@@ -945,7 +1016,7 @@
       "fileMatch": [
         ".dolittle/event-horizons.json"
       ],
-      "url": "https://raw.githubusercontent.com/dolittle/Runtime/v5.1.1/Schemas/Events/event-horizons.json"
+      "url": "https://raw.githubusercontent.com/dolittle/Runtime/master/Schemas/Events/event-horizons.json"
     },
     {
       "name": "Dolittle Resources Configuration",
@@ -961,7 +1032,7 @@
       "fileMatch": [
         ".dolittle/server.json"
       ],
-      "url": "https://raw.githubusercontent.com/dolittle/Runtime/v5.1.1/Schemas/Server/server.json"
+      "url": "https://raw.githubusercontent.com/dolittle/Runtime/master/Schemas/Server/server.json"
     },
     {
       "name": "Dolittle Tenants Configuration",
@@ -969,7 +1040,7 @@
       "fileMatch": [
         ".dolittle/tenants.json"
       ],
-      "url": "https://raw.githubusercontent.com/dolittle/Runtime/v5.1.1/Schemas/Tenancy/tenants.json"
+      "url": "https://raw.githubusercontent.com/dolittle/Runtime/master/Schemas/Tenancy/tenants.json"
     },
     {
       "name": "Dolittle Tenant Map Configuration",
@@ -1027,7 +1098,7 @@
     {
       "name": "Eclipse Che Devfile",
       "description": "JSON schema for Eclipse Che Devfiles",
-      "url": "https://raw.githubusercontent.com/eclipse/che/7.19.2/wsmaster/che-core-api-workspace/src/main/resources/schema/1.0.0/devfile.json",
+      "url": "https://raw.githubusercontent.com/eclipse-che/che-server/master/wsmaster/che-core-api-workspace/src/main/resources/schema/1.0.0/devfile.json",
       "fileMatch": [
         "devfile.yaml",
         ".devfile.yaml"
@@ -1067,6 +1138,18 @@
         "epr-manifest.json"
       ],
       "url": "https://json.schemastore.org/epr-manifest.json"
+    },
+    {
+      "name": "Error pages",
+      "description": "Error-Pages configuration file",
+      "url": "https://cdn.jsdelivr.net/gh/tarampampam/error-pages@latest/schemas/config/1.0.schema.json",
+      "fileMatch": [
+        "error-pages*.yml",
+        "error-pages*.yaml"
+      ],
+      "versions": {
+        "1.0": "https://cdn.jsdelivr.net/gh/tarampampam/error-pages@latest/schemas/config/1.0.schema.json"
+      }
     },
     {
       "name": "electron-builder configuration file.",
@@ -1158,7 +1241,7 @@
         "system.json",
         "module.json"
       ],
-      "url": "https://gitlab.com/-/snippets/2062623/raw/master/foundryvtt_manifest_schema.json"
+      "url": "https://json.schemastore.org/foundryvtt-manifest.json"
     },
     {
       "name": "Foundry VTT - Template",
@@ -1166,7 +1249,7 @@
       "fileMatch": [
         "template.json"
       ],
-      "url": "https://gitlab.com/-/snippets/2062623/raw/master/foundryvtt_template_schema.json"
+      "url": "https://json.schemastore.org/foundryvtt-template.json"
     },
     {
       "name": "Fossa configuration file",
@@ -1268,8 +1351,8 @@
       "name": "GitHub Issue Template configuration",
       "description": "YAML schema for configuring GitHub Issue Templates",
       "fileMatch": [
-          ".github/ISSUE_TEMPLATE/config.yml",
-          ".github/ISSUE_TEMPLATE/config.yaml"
+        ".github/ISSUE_TEMPLATE/config.yml",
+        ".github/ISSUE_TEMPLATE/config.yaml"
       ],
       "url": "https://json.schemastore.org/github-issue-config.json"
     },
@@ -1520,6 +1603,16 @@
       "url": "https://json.schemastore.org/imgbotconfig.json"
     },
     {
+      "name": "importmap.json",
+      "description": "JSON schema for Import Maps files",
+      "fileMatch": [
+        "importmap.json",
+        "import_map.json",
+        "import-map.json"
+      ],
+      "url": "https://json.schemastore.org/importmap.json"
+    },
+    {
       "name": "ioBroker JSON UI",
       "description": "Schema for ioBroker JSON-based admin user interfaces - config, custom and tabs",
       "fileMatch": [
@@ -1677,11 +1770,7 @@
         "*.k3d.yaml",
         "*.k3d.yml"
       ],
-      "url": "https://raw.githubusercontent.com/rancher/k3d/main/pkg/config/v1alpha2/schema.json",
-      "versions": {
-        "v1alpha2": "https://raw.githubusercontent.com/rancher/k3d/main/pkg/config/v1alpha2/schema.json",
-        "v1alpha3": "https://raw.githubusercontent.com/rancher/k3d/main/pkg/config/v1alpha3/schema.json"
-      }
+      "url": "https://raw.githubusercontent.com/rancher/k3d/main/pkg/config/config.versions.schema.json"
     },
     {
       "name": "Ory Keto configuration",
@@ -1795,6 +1884,22 @@
         "*.megalinter-descriptor.yml"
       ],
       "url": "https://raw.githubusercontent.com/megalinter/megalinter/main/megalinter/descriptors/schemas/megalinter-descriptor.jsonschema.json"
+    },
+    {
+      "name": "Meltano project definition",
+      "description": "JSON schema for Meltano project definition files",
+      "fileMatch": [
+        "*meltano.yml"
+      ],
+      "url": "https://gitlab.com/meltano/meltano/-/raw/master/schema/meltano.schema.json"
+    },
+    {
+      "name": "Meltano plugin discovery definition",
+      "description": "JSON schema for Meltano plugin discovery definition file",
+      "fileMatch": [
+        "*discovery.yml"
+      ],
+      "url": "https://gitlab.com/meltano/meltano/-/raw/master/schema/discovery.schema.json"
     },
     {
       "name": "Microsoft Band Web Tile",
@@ -1931,6 +2036,17 @@
         "mycode.json"
       ],
       "url": "https://json.schemastore.org/mycode.json"
+    },
+    {
+      "name": "napari plugin manifest",
+      "description": "Schema for a napari plugin manifest",
+      "fileMatch": [
+        "napari.yml",
+        "napari.yaml",
+        ".napari.yml",
+        ".napari.yaml"
+      ],
+      "url": "https://github.com/napari/npe2/releases/latest/download/schema.json"
     },
     {
       "name": "Netlify config schema",
@@ -2099,6 +2215,8 @@
       "name": "Outblocks App configuration",
       "description": "JSON schema for Outblocks App configuration files",
       "fileMatch": [
+        "app.outblocks.yaml",
+        "app.outblocks.yml",
         "outblocks.yaml",
         "outblocks.yml"
       ],
@@ -2407,16 +2525,16 @@
       "url": "https://raw.githubusercontent.com/readthedocs/readthedocs.org/master/readthedocs/rtd_tests/fixtures/spec/v2/schema.json"
     },
     {
-      "name": "Red-DiscordBot Сog",
-      "description": "Red-DiscordBot Сog metadata file",
+      "name": "Red-DiscordBot Cog",
+      "description": "Red-DiscordBot Cog metadata file",
       "fileMatch": [
         "info.json"
       ],
       "url": "https://raw.githubusercontent.com/Cog-Creators/Red-DiscordBot/V3/develop/schema/red_cog.schema.json"
     },
     {
-      "name": "Red-DiscordBot Сog Repo",
-      "description": "Red-DiscordBot Сog Repo metadata file",
+      "name": "Red-DiscordBot Cog Repo",
+      "description": "Red-DiscordBot Cog Repo metadata file",
       "fileMatch": [
         "info.json"
       ],
@@ -2641,7 +2759,7 @@
         "skyuxconfig.json",
         "skyuxconfig.*.json"
       ],
-      "url": "https://raw.githubusercontent.com/blackbaud/skyux-config/4.0.4/skyuxconfig-schema.json"
+      "url": "https://raw.githubusercontent.com/blackbaud/skyux-config/master/skyuxconfig-schema.json"
     },
     {
       "name": "snapcraft",
@@ -2746,6 +2864,14 @@
         ".github/stale.yml"
       ],
       "url": "https://json.schemastore.org/stale.json"
+    },{
+      "name": "Statamic Blueprint",
+      "description": "A Statamic Blueprint Schema",
+      "fileMatch": [
+        "resources/blueprints/**/*.yml",
+        "resources/blueprints/**/*.yaml"
+      ],
+      "url": "https://raw.githubusercontent.com/Konafets/statamic-blueprint-validation/main/statamic.blueprint.schema.json"
     },
     {
       "name": "Stryker Mutator",
@@ -2754,7 +2880,7 @@
         "stryker.conf.json",
         "stryker-*.conf.json"
       ],
-      "url": "https://raw.githubusercontent.com/stryker-mutator/stryker/v4.0.0/packages/api/schema/stryker-core.json"
+      "url": "https://raw.githubusercontent.com/stryker-mutator/stryker/master/packages/api/schema/stryker-core.json"
     },
     {
       "name": "StyleCop Analyzers Configuration",
@@ -2762,7 +2888,7 @@
       "fileMatch": [
         "stylecop.json"
       ],
-      "url": "https://raw.githubusercontent.com/DotNetAnalyzers/StyleCopAnalyzers/1.1.118/StyleCop.Analyzers/StyleCop.Analyzers/Settings/stylecop.schema.json"
+      "url": "https://raw.githubusercontent.com/DotNetAnalyzers/StyleCopAnalyzers/master/StyleCop.Analyzers/StyleCop.Analyzers/Settings/stylecop.schema.json"
     },
     {
       "name": ".stylelintrc",
@@ -3007,7 +3133,7 @@
       "fileMatch": [
         "version.json"
       ],
-      "url": "https://raw.githubusercontent.com/dotnet/Nerdbank.GitVersioning/v3.3.37/src/NerdBank.GitVersioning/version.schema.json"
+      "url": "https://raw.githubusercontent.com/dotnet/Nerdbank.GitVersioning/master/src/NerdBank.GitVersioning/version.schema.json"
     },
     {
       "name": "vim-addon-info",
@@ -3135,7 +3261,7 @@
       "fileMatch": [
         "*.version"
       ],
-      "url": "https://raw.githubusercontent.com/linuxgurugamer/KSPAddonVersionChecker/1.4.1.5/KSP-AVC.schema.json"
+      "url": "https://raw.githubusercontent.com/linuxgurugamer/KSPAddonVersionChecker/master/KSP-AVC.schema.json"
     },
     {
       "name": "KSP-CKAN",
@@ -3143,7 +3269,7 @@
       "fileMatch": [
         "*.ckan"
       ],
-      "url": "https://raw.githubusercontent.com/KSP-CKAN/CKAN/v1.28.0/CKAN.schema"
+      "url": "https://raw.githubusercontent.com/KSP-CKAN/CKAN/master/CKAN.schema"
     },
     {
       "name": "JSON Schema Draft 4",
@@ -3332,7 +3458,7 @@
       "fileMatch": [
         ".taskcat.yml"
       ],
-      "url": "https://raw.githubusercontent.com/aws-quickstart/taskcat/0.9.20/taskcat/cfg/config_schema.json"
+      "url": "https://raw.githubusercontent.com/aws-quickstart/taskcat/master/taskcat/cfg/config_schema.json"
     },
     {
       "name": "BizTalkServerApplicationSchema",
@@ -3362,7 +3488,7 @@
         ".neoload.yml",
         ".neoload.json"
       ],
-      "url": "https://raw.githubusercontent.com/Neotys-Labs/neoload-cli/1.1.4/resources/as-code.latest.schema.json"
+      "url": "https://raw.githubusercontent.com/Neotys-Labs/neoload-cli/master/resources/as-code.latest.schema.json"
     },
     {
       "name": "release drafter",
@@ -3379,7 +3505,7 @@
         "*zuul.d/*.yaml",
         "*/.zuul.yaml"
       ],
-      "url": "https://raw.githubusercontent.com/pycontribs/zuul-lint/0.1.1/zuul_lint/zuul-schema.json"
+      "url": "https://raw.githubusercontent.com/pycontribs/zuul-lint/master/zuul_lint/zuul-schema.json"
     },
     {
       "name": "Briefcase",
@@ -3395,7 +3521,7 @@
       "fileMatch": [
         "*.har"
       ],
-      "url": "https://raw.githubusercontent.com/ahmadnassri/har-schema/v2.0.0/lib/har.json"
+      "url": "https://raw.githubusercontent.com/ahmadnassri/har-schema/master/lib/har.json"
     },
     {
       "name": "jsdoc",
@@ -3513,7 +3639,7 @@
         "**/yippee-*.yml",
         "**/*.yippee.yml"
       ],
-      "url": "https://raw.githubusercontent.com/nagyesta/yippee-ki-json/v1.3.2/schema/yippee-ki-json_config_schema.json",
+      "url": "https://raw.githubusercontent.com/nagyesta/yippee-ki-json/main/schema/yippee-ki-json_config_schema.json",
       "versions": {
         "1.1.2": "https://raw.githubusercontent.com/nagyesta/yippee-ki-json/v1.1.2/schema/yippee-ki-json_config_schema.json",
         "latest": "https://raw.githubusercontent.com/nagyesta/yippee-ki-json/main/schema/yippee-ki-json_config_schema.json"
@@ -3588,11 +3714,12 @@
         "*build-cache-node-config.yml",
         "*build-cache-node-config.yaml"
       ],
-      "url": "https://docs.gradle.com/build-cache-node/schema/build-cache-node-config-schema-3.json",
+      "url": "https://docs.gradle.com/build-cache-node/schema/build-cache-node-config-schema-4.json",
       "versions": {
         "1.0": "https://docs.gradle.com/build-cache-node/schema/build-cache-node-config-schema-1.json",
         "2.0": "https://docs.gradle.com/build-cache-node/schema/build-cache-node-config-schema-2.json",
-        "3.0": "https://docs.gradle.com/build-cache-node/schema/build-cache-node-config-schema-3.json"
+        "3.0": "https://docs.gradle.com/build-cache-node/schema/build-cache-node-config-schema-3.json",
+        "4.0": "https://docs.gradle.com/build-cache-node/schema/build-cache-node-config-schema-4.json"
       }
     },
     {
@@ -3686,19 +3813,27 @@
     {
       "name": "User Journey Map YAML Schema",
       "description": "JSON Schema for user journey map definition files.",
-      "fileMatch": [ "*.jm.yaml", "*.jm.yml" ],
+      "fileMatch": [
+        "*.jm.yaml",
+        "*.jm.yml"
+      ],
       "url": "https://raw.githubusercontent.com/arvinxx/components/master/packages/journey-map/schema/journey-map.schema.json"
     },
     {
       "name": "RKE Cluster Configuration YAML Schema",
       "description": "YAML Schema for the cluster.yml configuration file for RKE",
-      "fileMatch": [ "cluster.yml", "cluster.yaml" ],
+      "fileMatch": [
+        "cluster.yml",
+        "cluster.yaml"
+      ],
       "url": "https://raw.githubusercontent.com/dcermak/vscode-rke-cluster-config/main/schemas/cluster.yml.json"
     },
     {
       "name": "RKE Cluster Configuration JSON Schema",
       "description": "JSON Schema for the cluster.json configuration file for RKE",
-      "fileMatch": [ "cluster.json" ],
+      "fileMatch": [
+        "cluster.json"
+      ],
       "url": "https://raw.githubusercontent.com/dcermak/vscode-rke-cluster-config/main/schemas/cluster.json"
     },
     {
@@ -3795,7 +3930,7 @@
         ".markdownlint.yaml",
         ".markdownlint.yml"
       ],
-        "url": "https://json.schemastore.org/markdownlint.json"
+      "url": "https://json.schemastore.org/markdownlint.json"
     },
     {
       "name": "SauceCTL Configuration",
@@ -3817,18 +3952,27 @@
     {
       "name": "Woodpecker pipeline config",
       "description": "YAML schema for configuring Woodpecker CI",
-      "fileMatch": ["**/.woodpecker/**.yml", "**/.woodpecker.yml"],
+      "fileMatch": [
+        "**/.woodpecker/**.yml",
+        "**/.woodpecker.yml"
+      ],
       "url": "https://raw.githubusercontent.com/woodpecker-ci/woodpecker/master/pipeline/schema/schema.json"
     },
     {
       "name": "Netin Diagnostic System Template",
       "description": "Device template schema",
-      "fileMatch": ["*.ndst.yml", "*.ndst.yaml", "*.ndst.json"],
+      "fileMatch": [
+        "*.ndst.yml",
+        "*.ndst.yaml",
+        "*.ndst.json"
+      ],
       "url": "https://s3.eu-central-1.amazonaws.com/files.netin.io/spider-schemas/template.schema.json"
     },
     {
       "description": "YAML Schema for NOODL applications",
-      "fileMatch": ["*.noodl.yml"],
+      "fileMatch": [
+        "*.noodl.yml"
+      ],
       "name": "noodl.schema.json",
       "url": "https://noodl.s3.us-west-1.amazonaws.com/noodl.schema.json"
     },
@@ -3855,6 +3999,39 @@
         "stackhawk-*.yaml"
       ],
       "url": "https://download.stackhawk.com/hawk/jsonconfig/hawkconfig.json"
+    },
+    {
+      "name": "Serverless Framework Configuration",
+      "description": "Schema for serverless framework configuration files",
+      "fileMatch": [
+        "serverless.yml"
+      ],
+      "url": "https://raw.githubusercontent.com/lalcebo/json-schema/master/serverless/reference.json"
+    },
+    {
+      "name": "Shopware CLI Extension Store Configuration",
+      "description": "Schema for Shopware CLI Extension Store Configuration",
+      "fileMatch": [
+        ".shopware-extension.yml"
+      ],
+      "url": "https://raw.githubusercontent.com/FriendsOfShopware/shopware-cli/main/extension/shopware-extension-schema.json"
+    },
+    {
+      "name": "Shopware CLI Project Store Configuration",
+      "description": "Schema for Shopware CLI Project Store Configuration",
+      "fileMatch": [
+        ".shopware-project.yml"
+      ],
+      "url": "https://raw.githubusercontent.com/FriendsOfShopware/shopware-cli/main/shop/shopware-project-schema.json"
+    },
+    {
+      "name": "Qodana",
+      "description": "A standard qodana.yaml (or qodana.yml) format for Qodana (https://jetbrains.com/qodana) configuration.",
+      "fileMatch": [
+          "qodana.yaml",
+          "qodana.yml"
+      ],
+      "url": "https://json.schemastore.org/qodana-1.0.json"
     }
   ]
 }
